@@ -1,15 +1,13 @@
-package model.entity;
-
+package model.dto;
 import lombok.*;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 
-public class Order {
-	
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class ProductDTO {
 	private String item;
 	private Integer price;
 	
-
 }

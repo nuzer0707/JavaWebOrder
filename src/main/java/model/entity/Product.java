@@ -1,15 +1,16 @@
 package model.entity;
 
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class Order {
+public class Product {
 	
 	private String item;
 	private Integer price;
 	
-
 }
