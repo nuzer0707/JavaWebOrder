@@ -9,17 +9,20 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.dto.OrderDTO;
+import model.entity.Product;
 import service.OrderService;
+import service.ProductService;
 
 @WebServlet("/order/update")
 public class OrderUpdateServlet extends HttpServlet{
 	
 	private OrderService orderService = new OrderService();
-
+	private ProductService productService = new ProductService();
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String index = req.getParameter("index");
-		
+
 		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/update.jsp");
 		req.setAttribute("index", index);
 		rd.forward(req, resp);

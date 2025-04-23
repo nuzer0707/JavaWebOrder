@@ -18,7 +18,7 @@ import service.ProductService;
 public class OrderServlet extends HttpServlet {
 	
 	private OrderService orderService = new OrderService();
-	private ProductService poductService = new ProductService();
+	private ProductService productService = new ProductService();
 	// 查看歷史資料
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -27,7 +27,7 @@ public class OrderServlet extends HttpServlet {
 		
 		//計算金額
 		int totalPrice = orderDTOs.stream()
-								  .mapToInt(dto -> poductService.getPrice(dto.getMessage()))
+								  .mapToInt(dto -> productService.getPrice(dto.getMessage()))
 								  .sum();
 		
 		// 重導到指定 jsp 並帶上歷史紀錄資料
