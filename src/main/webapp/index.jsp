@@ -22,6 +22,8 @@
 					<option value="牛肉麵">牛肉麵</option>
 					<option value="陽春麵">陽春麵</option>
 					<option value="番茄麵">番茄麵</option>
+					<option value="麵疙瘩">麵疙瘩</option>
+					<option value="番茄麵">搶鍋麵</option>
 				</select>
 				<p />
 				<button type="submit" class="button-success pure-button">送出訂單</button>
