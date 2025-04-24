@@ -25,6 +25,7 @@
 			</fieldset>
 			<form class="pure-form" method="get" action="/JavaWebOrder/order">
 				<button type="submit" class="button-secondary pure-button">返回歷史資料</button>
+				<a href="/JavaWebOrder/index.jsp" class="pure-button pure-button-primary">回首頁</a>
 			</form>
 		</div>
 	</body>
