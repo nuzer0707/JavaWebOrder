@@ -10,19 +10,17 @@
 		<meta charset="UTF-8">
 		<title>修改訂單 #${ index }</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
-		<%-- ================================================== --%>
-		<%-- == 修改：使用 contextPath 引用 CSS == --%>
-		<%-- ================================================== --%>
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/buttons.css">
+		<link rel="stylesheet" href="/JavaWebOrder/css/buttons.css">
+		<style type="text/css">
+			body {padding: 20px;font-size: 24px;}
+			select {width: 300px;}
+		</style>
 	</head>
-	<body style="padding: 20px">
+	<body>
 
-		<%-- ================================================== --%>
-		<%-- == 修改：使用 contextPath 設定表單 action == --%>
-		<%-- ================================================== --%>
-		<form class="pure-form" method="post" action="${pageContext.request.contextPath}/order/update">
+		<form class="pure-form" method="post" action="/JavaWebOrder/order/update">
 			<fieldset>
-				<legend>修改訂單 #${ index }</legend>
+				<legend>修改訂單: ${ index }</legend>
 				Index:
 				<%-- ================================================== --%>
 				<%-- == 修改：將 index 改為隱藏欄位，並用 span 顯示 == --%>
@@ -36,7 +34,7 @@
 				<%-- ================================================== --%>
 				<select name="item">
 				    <%-- 檢查商品列表是否有效 --%>
-                    <c:if test="${ not empty allProducts }">
+                   <!-- <c:if test="${ not empty allProducts }"></c:if>-->
                         <%-- 迭代所有可用商品 --%>
                         <c:forEach var="product" items="${ allProducts }">
                             <%-- 為每個商品建立選項 --%>
@@ -46,11 +44,11 @@
                                 ${ product.item } (${ product.price }元)
                             </option>
                         </c:forEach>
-                    </c:if>
+                    
                     <%-- 處理商品列表為空的情況 --%>
-                    <c:if test="${ empty allProducts }">
+                   <!-- <c:if test="${ empty allProducts }">
                         <option value="" disabled>-- 無可用商品 --</option>
-                    </c:if>
+                    </c:if>-->
 				</select>
 				<%-- ================================================== --%>
 				<p />
@@ -58,7 +56,7 @@
 				<%-- ================================================== --%>
 				<%-- == 新增：取消按鈕，連結回訂單列表 == --%>
 				<%-- ================================================== --%>
-                <a href="${pageContext.request.contextPath}/order" class="pure-button">取消</a>
+                <a href="/JavaWebOrder/order" class="pure-button">取消</a>
 			</fieldset>
 		</form>
 	</body>

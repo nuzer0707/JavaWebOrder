@@ -11,8 +11,14 @@
 		<title>訂單歷史資料</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
 		<link rel="stylesheet" href="/JavaWebOrder/css/buttons.css">
+		<style type="text/css">
+			body {padding: 20px;font-size: 24px;}
+			select {width: 300px;}
+			.height-52 {height: 52px; }
+		</style>
+
 	</head>
-	<body style="padding: 20px">
+	<body>
 		<div class="pure-form">
 			<fieldset>
 				<legend>訂單歷史資料</legend>
@@ -28,7 +34,7 @@
 								<td>${ row.index }</td>
 								<td>${ dto.message }</td>
 								<td><a href="/JavaWebOrder/order/delete?index=${ row.index }" class="button-error pure-button">X</a></td>
-								<td><a href="/JavaWebOrder/order/update?index=${ row.index }" class="button-success pure-button">✏️</a></td>
+								<td><a href="/JavaWebOrder/order/update?index=${ row.index }" class="button-success pure-button height-52">✏️</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

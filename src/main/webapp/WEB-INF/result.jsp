@@ -10,15 +10,22 @@
 		<meta charset="UTF-8">
 		<title>訂單結果</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
+		<style type="text/css">
+			body {padding: 20px;font-size: 24px;}
+			select {width: 300px;}
+		</style>
 	</head>
-	<body style="padding: 20px">
+	<body>
 		<div class="pure-form">
 			<fieldset>
 				<legend>訂單結果</legend>
 				${ orderDTO.message }
 				<p />
-				<a href="/JavaWebOrder/index.jsp" class="pure-button pure-button-primary">回首頁</a>
+				<!--<a href="/JavaWebOrder/index.jsp" class="pure-button pure-button-primary">回首頁</a>-->
 			</fieldset>
+			<form class="pure-form" method="get" action="/JavaWebOrder/order">
+				<button type="submit" class="button-secondary pure-button">返回歷史資料</button>
+			</form>
 		</div>
 	</body>
 </html>

@@ -11,8 +11,12 @@
 		<title>訂單首頁</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
 		<link rel="stylesheet" href="/JavaWebOrder/css/buttons.css">
+	<style type="text/css">
+		body {padding: 20px;font-size: 24px;}
+		select {width: 300px;}
+	</style>
 	</head>
-	<body style="padding: 20px">
+	<body>
 		
 		<form class="pure-form" method="post" action="/JavaWebOrder/order">
 			<fieldset>
